@@ -97,42 +97,37 @@ else:
     pass
 
 #Ejercicio 10
+def hemisferioNorte(mes, dia) :
+    if (mes == 12 and (dia >= 21 and dia <= 31)) or (mes in [1, 2]) or (mes == 3 and dia <= 20):
+        print("Invierno")
+    elif (mes == 3 and (dia >= 21 and dia <= 31)) or (mes in [4, 5]) or (mes == 6 and dia <= 20):
+        print("Primavera")
+    elif (mes == 6 and (dia >= 21 and dia <= 30)) or (mes in [7, 8]) or (mes == 9 and dia <= 20):
+        print("Verano")
+    elif (mes == 9 and (dia >= 21 and dia <= 30)) or (mes in [10, 11]) or (mes == 12 and dia <= 20):
+        print("Otoño")
+    else:
+        print("Fecha inválida")
+
+def hemisferioSur(mes, dia) :
+    if (mes == 12 and (dia >= 21 and dia <= 31)) or (mes in [1, 2]) or (mes == 3 and dia <= 20):
+        print("Verano")
+    elif (mes == 3 and (dia >= 21 and dia <= 31)) or (mes in [4, 5]) or (mes == 6 and dia <= 20):
+        print("Otoño")
+    elif (mes == 6 and (dia >= 21 and dia <= 30)) or (mes in [7, 8]) or (mes == 9 and dia <= 20):
+        print("Invierno")
+    elif (mes == 9 and (dia >= 21 and dia <= 30)) or (mes in [10, 11]) or (mes == 12 and dia <= 20):
+        print("Primavera")
+    else:
+        print("Fecha inválida")
+
 hemisferio = input("¿En qué hemisferio te encuentras? (Norte/Sur): ")
 mes = int(input("Introduce el número de mes (1-12): "))
 dia = int(input("Introduce el día del mes (1-31): "))
 hemisferio = hemisferio.lower()
-
-
-def hemisferioNorte(hemisferio) :
-    if (mes == 12 and dia >= 21) or (mes in [1, 2]) or (mes == 3 and dia <= 20):
-    estacion_norte = "Invierno"
-    estacion_sur = "Verano"
-    elif (mes == 3 and dia >= 21) or (mes in [4, 5]) or (mes == 6 and dia <= 20):
-    estacion_norte = "Primavera"
-    estacion_sur = "Otoño"
-    elif (mes == 6 and dia >= 21) or (mes in [7, 8]) or (mes == 9 and dia <= 20):
-    estacion_norte = "Verano"
-    estacion_sur = "Invierno"
-    elif (mes == 9 and dia >= 21) or (mes in [10, 11]) or (mes == 12 and dia <= 20):
-    estacion_norte = "Otoño"
-    estacion_sur = "Primavera"
-    else:
-    return "Fecha inválida"
-    return estacion_norte if hemisferio == "n" else estacion_sur
-
-def hemisferioSur(hemisferio) :
-    if (mes == 12 and dia >= 21) or (mes in [1, 2]) or (mes == 3 and dia <= 20):
-    estacion_norte = "Invierno"
-    estacion_sur = "Verano"
-    elif (mes == 3 and dia >= 21) or (mes in [4, 5]) or (mes == 6 and dia <= 20):
-    estacion_norte = "Primavera"
-    estacion_sur = "Otoño"
-    elif (mes == 6 and dia >= 21) or (mes in [7, 8]) or (mes == 9 and dia <= 20):
-    estacion_norte = "Verano"
-    estacion_sur = "Invierno"
-    elif (mes == 9 and dia >= 21) or (mes in [10, 11]) or (mes == 12 and dia <= 20):
-    estacion_norte = "Otoño"
-    estacion_sur = "Primavera"
-    else:
-    return "Fecha inválida"
-    return estacion_norte if hemisferio == "n" else estacion_sur    
+if (hemisferio == "norte") :
+    hemisferioNorte(mes, dia)
+elif (hemisferio == "sur") :
+    hemisferioSur(mes, dia)
+else:
+    print("Hemisferio invalido")
