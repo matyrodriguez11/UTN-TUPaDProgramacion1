@@ -15,4 +15,4 @@ for numero in numeros_Binarios: #Recorremos toda la lista
     time.sleep(1.25) #Retraso de un segundo
 
 #Finalizamos el programa
-print("\nFin del programa") 
+print("\nFin del programa")     
