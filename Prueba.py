@@ -1,7 +1,10 @@
-#Ejercicio 3
-inicial = int(input("Por favor ingresa un numero entero inicial"))
-final = int(input("Por favor ingresa un numero entero final"))
-sumatoria = 0
-for i in range ((inicial+1), (final)):
-    sumatoria += i
-print(sumatoria) 
+#Ejercicio 10
+numero = int(input("Ingresa un número: "))
+numeroInvertido = 0
+
+while numero > 0:
+    digito = numero % 10
+    numeroInvertido = numeroInvertido * 10 + digito
+    numero //= 10
+
+print(numeroInvertido)
